@@ -22,7 +22,7 @@ const Header: React.FC = () => {
       }`}
     >
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="#home" className="flex items-center space-x-2">
+        <a href="/#home" className="flex items-center space-x-2">
           <ShieldCheckIcon className="w-8 h-8 text-blue-500" />
           <span className="text-2xl font-bold text-white">NextGen CCTV</span>
         </a>
@@ -30,7 +30,7 @@ const Header: React.FC = () => {
           {navLinks.map((link) => (
             <a
               key={link}
-              href={`#${link.toLowerCase()}`}
+              href={`/#${link.toLowerCase()}`}
               className="text-gray-300 hover:text-blue-500 transition-colors duration-300"
             >
               {link}
@@ -38,7 +38,7 @@ const Header: React.FC = () => {
           ))}
         </nav>
         <a 
-          href="tel:+18005551234" 
+          href="tel:+919500894934" 
           className="hidden md:flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors duration-300"
         >
           <PhoneIcon className="w-5 h-5" />

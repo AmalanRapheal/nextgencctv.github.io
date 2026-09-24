@@ -48,8 +48,9 @@ const WhyChooseUs: React.FC = () => {
           </div>
           <div className="lg:w-1/2">
             <img 
-              src="https://picsum.photos/seed/tech/600/700" 
+              src="https://picsum.photos/seed/tech/600/700.webp" 
               alt="Security technology" 
+              loading="lazy"
               className="rounded-lg shadow-2xl object-cover h-full w-full"
             />
           </div>

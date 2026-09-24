@@ -30,7 +30,7 @@ const projects = [
 const ProjectCard: React.FC<typeof projects[0]> = ({ image, category, title, description }) => (
   <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg group transform hover:-translate-y-2 transition-all duration-300">
     <div className="overflow-hidden">
-      <img src={image} alt={title} className="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500 ease-in-out" />
+      <img src={`${image}.webp`} alt={title} loading="lazy" className="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500 ease-in-out" />
     </div>
     <div className="p-6">
       <span className="inline-block bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider mb-3">

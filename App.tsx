@@ -1,31 +1,32 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import Services from './components/Services';
-import WhyChooseUs from './components/WhyChooseUs';
-import Testimonials from './components/Testimonials';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
-import TrustedBy from './components/TrustedBy';
-import Projects from './components/Projects';
+import FloatingWhatsApp from './components/FloatingWhatsApp';
+import CookieConsent from './components/CookieConsent';
+import Home from './components/Home';
+import PrivacyPolicy from './components/PrivacyPolicy';
+import TermsConditions from './components/TermsConditions';
+import NotFound from './components/NotFound';
 
 const App: React.FC = () => {
   return (
-    <div className="bg-gray-900 text-white font-sans">
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Services />
-        <WhyChooseUs />
-        <Projects />
-        <TrustedBy />
-        <Testimonials />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <Router>
+      <div className="bg-gray-900 text-white font-sans min-h-screen flex flex-col">
+        <Header />
+        <div className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-and-conditions" element={<TermsConditions />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </div>
+        <Footer />
+        <FloatingWhatsApp />
+        <CookieConsent />
+      </div>
+    </Router>
   );
 };
 

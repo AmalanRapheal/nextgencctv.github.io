@@ -14,8 +14,9 @@ const About: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-1/2">
             <img 
-              src="https://picsum.photos/seed/team/600/400" 
+              src="https://picsum.photos/seed/team/600/400.webp" 
               alt="Next Generation CCTV Solutions Team" 
+              loading="lazy"
               className="rounded-lg shadow-2xl"
             />
           </div>

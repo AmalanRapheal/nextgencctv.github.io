@@ -2,7 +2,7 @@ import React from 'react';
 
 const TestimonialCard: React.FC<{ name: string; company: string; text: string; avatar: string; }> = ({ name, company, text, avatar }) => (
   <div className="bg-gray-800 p-8 rounded-lg shadow-lg flex flex-col items-center text-center">
-    <img src={avatar} alt={name} className="w-20 h-20 rounded-full mb-4 border-4 border-blue-500" />
+    <img src={`${avatar}.webp`} alt={name} loading="lazy" className="w-20 h-20 rounded-full mb-4 border-4 border-blue-500" />
     <p className="text-gray-300 italic mb-4">"{text}"</p>
     <div className="mt-auto">
       <h4 className="font-bold text-white text-lg">{name}</h4>
